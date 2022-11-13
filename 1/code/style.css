@@ -1,0 +1,14 @@
+.container {
+  padding: 30px 0;
+  min-height: 100vh;
+}
+
+.get_square {
+  min-height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.square {
+  padding: 30px 0;
+}
