@@ -3,6 +3,6 @@ const getSquareBtn = document.getElementById("get_square");
 const squareOutput = document.getElementById("square");
 
 getSquareBtn.addEventListener("click", () => {
-    const variant = inputVariant.value;
-    squareOutput.textContent = Math.PI * (variant * 2) ** 2 * (variant + 4);
+    const variant = Number(inputVariant.value);
+    squareOutput.textContent = Math.PI * (variant + 4) * variant ** 2;
 });
