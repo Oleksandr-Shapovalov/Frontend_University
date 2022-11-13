@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="nullstyle.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>02</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center m-4">Register Form</h1>
+      <form id="registerForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" />
+        </div>
+        <div class="mb-3">
+          <label for="surname" class="form-label">Surname</label>
+          <input type="text" class="form-control" id="surname" name="surname" />
+        </div>
+        <div class="mb-3">
+          <label for="gender" class="form-label">Gender</label>
+          <select class="form-select" id="gender" name="gender">
+            <option value="" disabled selected>Select your gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="Login" class="form-label">Login</label>
+          <input type="text" class="form-control" id="login" name="login" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input autocomplete="new-password" type="password" class="form-control" id="password" name="password" />
+        </div>
+        <div class="mb-3">
+          <label for="password-repeat" class="form-label">Repeat password</label>
+          <input autocomplete="new-password" type="password" class="form-control" id="password-repeat" name="password-repeat" />
+        </div>
+
+        <button id="submit" name="submit" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
