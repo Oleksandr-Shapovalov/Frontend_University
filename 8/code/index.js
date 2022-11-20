@@ -35,10 +35,10 @@ function setObjects() {
   });
 }
 
-function resetData() {
+function resetData(name = "User") {
   roundNumber = 0;
 
-  userData["name"] = "User";
+  userData["name"] = name;
   userData["all-points"] = 0;
   userData["round-points"] = 0;
 
@@ -122,7 +122,7 @@ function doRestart() {
   setTimeout(() => {
     const isRestart = confirm("Restart game?");
     if (isRestart) {
-      resetData();
+      resetData(userData["name"]);
 
       showChanges();
       fight.disabled = false;
