@@ -15,7 +15,7 @@
   position: relative;
   margin: 0 auto;
   height: 70vh;
-  width: 80vw;
+  width: 100%;
   animation: ballAnimate 10s infinite;
 }
 .sphere-container img {
