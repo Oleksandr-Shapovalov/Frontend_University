@@ -1,0 +1,11 @@
+.wrap {
+  padding-top: 30px;
+  min-height: 100vh;
+}
+
+.border-points {
+  border-top: 2px solid rgb(59, 58, 158);
+  border-bottom: 2px solid rgb(59, 58, 158);
+  text-align: center;
+  align-self: stretch;
+}
