@@ -56,8 +56,6 @@ function setGameData() {
     showLineData(line, shuffledIndexes);
     deleteAnimationClasses();
   });
-
-  console.log(dataArray);
 }
 
 function showLineData(line, dataArr) {
@@ -81,7 +79,7 @@ function goClick() {
   addAnimationClasses();
 
   const isWon = checkIfWon();
-  console.log(isWon);
+
   if (isWon) {
     sleep(600).then(() => {
       alert("You woooon!!! 🎈🎆🎇🎉🎊");
