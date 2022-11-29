@@ -1,3 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.modalContainer {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.35);
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  will-change: opacity;
+  transition: opacity 0.4s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modalContent {
+    padding: 20px;
+    background: rgb(216, 216, 216);
+    border-radius: 15px;
+
+    width: min(100%, 400px);
+
+    will-change: transform;
+    transition: transform 0.4s ease-in-out;
+
+    transform: scale(0);
+
+    &.active {
+      transform: scale(1);
+    }
+  }
+}
+
+.radioContainer {
+  input {
+    width: 0;
+    height: 0;
+    display: inline;
+    visibility: hidden;
+  }
+
+  input ~ .radio {
+    position: relative;
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid;
+
+    @apply border-indigo-300;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+
+      will-change: transform;
+      transition: transform 0.3s ease-in-out;
+
+      transform: scale(0);
+
+      @apply bg-indigo-300;
+    }
+  }
+
+  input:checked ~ .radio {
+    &::after {
+      transform: scale(0.8);
+    }
+  }
+}
